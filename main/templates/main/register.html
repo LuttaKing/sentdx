@@ -1,0 +1,30 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/bootstrap.min.css' %}">
+
+</head>
+<body>
+    {%if messages%}
+        {%for i in messages%}
+        <h2>{{i}}</h2>
+        {%endfor%}
+
+    {%endif%}   
+    {% block content %}
+    <form method='POST'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class='btn btn-primary btn-xl text-uppercase'type="submit">register</button>
+
+    </form>
+    <p>if you have an account, <a href="#">Login</a></p>
+
+    {% endblock %}
+</body>
+</html>

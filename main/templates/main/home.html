@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/bootstrap.min.css' %}">
+</head>
+<body>
+    {%if messages%}
+        {%for i in messages%}
+            <h2>{{i}}</h2>
+        {%endfor%}
+
+    {%endif%}
+    
+    {% for i in Tuts %}
+    <div class='card'><div class="col-lg-4">
+        <h5>{{i}}</h5>  
+        <p class="lead mb-0">  {{i.tut_content}}</p>
+        <p class="lead mb-0">{{i.date_published}}</p>  
+      </div></div>
+    
+    {% endfor %}
+
+    
+</body>
+</html>
