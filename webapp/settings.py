@@ -25,7 +25,7 @@ SECRET_KEY = 'hokmvz7gud$cg09o)-le_o^v+7*g%)8v#m0i7du)9=55-8$)t0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['floating-dawn-79667.herokuapp.com/']
+ALLOWED_HOSTS = ['floating-dawn-79667.herokuapp.com']
 
 
 # Application definition
